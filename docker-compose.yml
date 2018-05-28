@@ -21,3 +21,15 @@ services:
       - '80:80'
     volumes:
       - '.:/var/www/html'
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: starterkit
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
