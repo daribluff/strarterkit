@@ -21,15 +21,27 @@ services:
       - '80:80'
     volumes:
       - '.:/var/www/html'
+
   mysql:
     image: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: 
       MYSQL_DATABASE: starterkit
       MYSQL_USER: root
       MYSQL_PASSWORD: 
     volumes:
-      - mysql-data:/var/lib/mysql
-
-volumes:
-  mysql-data:
+      - ./mysql/initdb/:/docker-entrypoint-initdb.d
+      - ./mysql/data/:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: sf4_phpmyadmin
+    restart: always
+    ports:
+      - 9090:80
+    depends_on:
+       - mysql
+    restart: always
+    volumes:
+        - "/sessions"
