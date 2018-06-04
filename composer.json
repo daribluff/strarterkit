@@ -25,13 +25,12 @@
         "symfony/yaml": "^3.4"
     },
     "require-dev": {
-        "symfony/browser-kit": "^3.4",
-        "symfony/css-selector": "^3.4",
+        "sensiolabs/security-checker": "^4.1",
         "symfony/debug-pack": "*",
         "symfony/dotenv": "^3.4",
         "symfony/maker-bundle": "^1.0",
-        "symfony/phpunit-bridge": "^3.4",
         "symfony/profiler-pack": "*",
+        "symfony/test-pack": "^1.0",
         "symfony/web-server-bundle": "^3.4"
     },
     "config": {
@@ -58,7 +57,8 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "security-checker security:check": "script"
         },
         "post-install-cmd": [
             "@auto-scripts"
@@ -72,7 +72,6 @@
     },
     "extra": {
         "symfony": {
-            "id": "01C9RXWRK3D9X374Q61HT6ZQBT",
             "allow-contrib": false
         }
     }
