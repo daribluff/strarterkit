@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  apache:
+      build:
+         context: ./docker/apache
+         dockerfile: apache.Dockerfile
+      container_name: apache
+      ports:
+         - '80:80'
+      volumes:
+#        - ./docker/config/vhosts:/etc/apache2/sites-enabled
+        - .:/home/wwwroot/sf4
+      depends_on:
+         - php
+  web:
+    image: httpd  # this will use httpd:latest
+    volumes:
+      - .:/usr/local/apache2/htdocs/
+  php:
+    build: 
+      context: ./docker/php
+      dockerfile: php.Dockerfile
+#    ports:
+#      - '80:80'
+    volumes:
+      - '.:/var/www/html'
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: starterkit
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: sf4_phpmyadmin
+    ports:
+      - '8080:80'
+    links:
+      - mysql
+
+volumes:
+  mysql-data:
+#  vhosts:
