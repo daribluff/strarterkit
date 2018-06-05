@@ -22,25 +22,42 @@ services:
     volumes:
       - '.:/var/www/html'
 
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin
+  #   container_name: sf4_phpmyadmin
+  #   ports:
+  #     - 9090:80
+  #   depends_on:
+  #      - mysql
+  #   links:
+  #      - mysql
+  #   environment:
+  #     - PMA_ARBITRARY=1
+
   mysql:
-    image: mysql
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    volumes:
+      - ./config/mysql:/etc/mysql/conf.d:ro
+      - ./data/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: starterkit
-    volumes:
-      # - ./mysql/initdb/:/docker-entrypoint-initdb.d
-      - data:/var/lib/mysql
-    ports:
-      - "3306:3306"
+      # MYSQL_USER: root
+      # MYSQL_DATABASE: starterkit
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: sf4_phpmyadmin
+    links:
+      - mysql:mysql
     ports:
       - 9090:80
-    links:
-       - mysql
+    environment:
+      PMA_USER : root
+      PMA_PASSWORD : root
     environment:
       - PMA_ARBITRARY=1
+  
 
-volumes:
-  data:
+# volumes:
+#   data:
