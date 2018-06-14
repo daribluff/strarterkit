@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fb58337-0eb0-4241-b7e7-76d03b2b0a65" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docker/phpmyadmin/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docker/phpmyadmin/config.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docker/phpmyadmin/docker-entrypoint.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docker/phpmyadmin/phpmyadmin.Dockerfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/nginx/default.template.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/php/php.ini" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/auto.cnf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.000001" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.000002" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.000003" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.000004" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.000005" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.000006" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.000007" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.000008" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.000009" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.000010" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/binlog.index" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/ca-key.pem" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/ca.pem" afterPath="" />
@@ -28,154 +18,112 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/ibdata1" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/ibtmp1" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/columns_priv.MYI" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/columns_priv_73.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/db.MYD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/db.MYI" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/db_74.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/engine_cost.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/func.MYI" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/func_77.sdi" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/general_log.CSM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/general_log_78.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/gtid_executed.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/help_category.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/help_keyword.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/help_relation.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/help_topic.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/innodb_index_stats_backup57.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/innodb_table_stats_backup57.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/ndb_binlog_index.MYD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/ndb_binlog_index.MYI" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/ndb_binlog_index_86.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/plugin.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/procs_priv.MYD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/procs_priv.MYI" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/procs_priv_88.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/proxies_priv.MYD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/proxies_priv.MYI" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/proxies_priv_89.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/server_cost.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/servers.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/slave_master_info.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/slave_relay_log_info.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/slave_worker_info.ibd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/general_log_195.sdi" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/slow_log.CSM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/slow_log.CSV" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/slow_log_95.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/tables_priv.MYD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/tables_priv.MYI" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/tables_priv_96.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/time_zone.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/time_zone_leap_second.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/time_zone_name.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/time_zone_transition.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/time_zone_transition_type.ibd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/user.MYD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/user.MYI" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/user_102.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/accounts_290.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/cond_instances_229.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/data_lock_waits_305.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/data_locks_304.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_errors_su_284.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_errors_su_285.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_errors_su_286.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_errors_su_287.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_errors_su_288.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_cu_256.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_hi_257.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_hi_258.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_su_259.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_su_260.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_su_261.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_su_262.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_su_263.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_264.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_265.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_266.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_267.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_268.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_269.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_270.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_271.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_272.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_273.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_274.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_275.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_276.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_277.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_278.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_279.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_280.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_281.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_282.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_283.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_cur_230.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_his_231.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_his_232.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_233.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_234.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_235.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_236.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_237.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_238.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/file_instances_239.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/file_summary_by__240.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/file_summary_by__241.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/global_status_323.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/global_variables_326.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/host_cache_242.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/hosts_291.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/log_status_316.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/memory_summary_b_298.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/memory_summary_b_299.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/memory_summary_b_300.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/memory_summary_b_301.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/memory_summary_g_297.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/metadata_locks_303.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/mutex_instances_243.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/objects_summary__244.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/performance_time_245.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/persisted_variab_329.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/prepared_stateme_317.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_309.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_310.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_311.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_312.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_314.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_315.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_conn_306.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_conn_308.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_grou_307.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_grou_313.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/rwlock_instances_246.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/session_account__296.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/session_connect__295.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/session_status_324.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/session_variable_327.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/setup_actors_247.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/setup_consumers_248.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/setup_instrument_249.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/setup_objects_250.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/setup_threads_251.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/socket_instances_292.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/socket_summary_b_293.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/socket_summary_b_294.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/status_by_accoun_319.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/status_by_host_320.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/status_by_thread_321.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/status_by_user_322.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/table_handles_302.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/table_io_waits_s_252.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/table_io_waits_s_253.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/table_lock_waits_254.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/threads_255.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/user_defined_fun_330.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/user_variables_b_318.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/users_289.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/variables_by_thr_325.sdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/variables_info_328.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/mysql/slow_log_196.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/accounts_133.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/cond_instances_72.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/data_lock_waits_148.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/data_locks_147.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_errors_su_127.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_errors_su_128.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_errors_su_129.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_errors_su_130.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_errors_su_131.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_cu_99.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_hi_100.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_hi_101.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_su_102.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_su_103.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_su_104.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_su_105.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_stages_su_106.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_107.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_108.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_109.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_110.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_111.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_112.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_113.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_114.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_115.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_116.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_117.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_statement_118.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_119.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_120.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_121.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_122.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_123.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_124.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_125.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_transacti_126.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_cur_73.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_his_74.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_his_75.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_76.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_77.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_78.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_79.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_80.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/events_waits_sum_81.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/file_instances_82.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/file_summary_by__83.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/file_summary_by__84.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/global_status_166.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/global_variables_169.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/host_cache_85.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/hosts_134.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/log_status_159.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/memory_summary_b_141.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/memory_summary_b_142.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/memory_summary_b_143.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/memory_summary_b_144.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/memory_summary_g_140.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/metadata_locks_146.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/mutex_instances_86.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/objects_summary__87.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/performance_time_88.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/persisted_variab_172.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/prepared_stateme_160.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_152.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_153.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_154.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_155.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_157.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_appl_158.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_conn_149.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_conn_151.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_grou_150.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/replication_grou_156.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/rwlock_instances_89.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/session_account__139.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/session_connect__138.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/session_status_167.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/session_variable_170.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/setup_actors_90.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/setup_consumers_91.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/setup_instrument_92.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/setup_objects_93.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/setup_threads_94.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/socket_instances_135.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/socket_summary_b_136.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/socket_summary_b_137.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/status_by_accoun_162.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/status_by_host_163.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/status_by_thread_164.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/status_by_user_165.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/table_handles_145.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/table_io_waits_s_95.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/table_io_waits_s_96.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/table_lock_waits_97.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/threads_98.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/user_defined_fun_173.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/user_variables_b_161.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/users_132.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/variables_by_thr_168.sdi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/performance_schema/variables_info_171.sdi" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/private_key.pem" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/public_key.pem" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/server-cert.pem" afterPath="" />
@@ -183,9 +131,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/sys/sys_config.ibd" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/undo_001" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/mysql/undo_002" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/mysql/mysql/columns_priv.MYD" afterPath="$PROJECT_DIR$/docker/mySQL/docker-entrypoint.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/mysql/mysql/func.MYD" afterPath="$PROJECT_DIR$/docker/mySQL/localdb-run.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/mysql/mysql/general_log.CSV" afterPath="$PROJECT_DIR$/docker/mySQL/mySQL.Dockerfile" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/mysql/mysql/general_log.CSV" afterPath="$PROJECT_DIR$/docker/.env" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/mysql/mysql/slow_log.CSV" afterPath="$PROJECT_DIR$/etc/nginx/default.conf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-compose.yml" afterPath="$PROJECT_DIR$/docker-compose.yml" />
     </list>
@@ -201,8 +148,58 @@
       <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+            <state relative-caret-position="340">
+              <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/etc/nginx/default.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.template.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/etc/nginx/default.template.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="47" column="3" lean-forward="false" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="php.ini" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/etc/php/php.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -212,17 +209,17 @@
         <entry file="file://$PROJECT_DIR$/docker/mySQL/localdb-run.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+              <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mySQL.Dockerfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mySQL.Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker/mySQL/mySQL.Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="91" lean-forward="true" selection-start-line="8" selection-start-column="91" selection-end-line="8" selection-end-column="91" />
+            <state relative-caret-position="102">
+              <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -232,7 +229,7 @@
         <entry file="file://$PROJECT_DIR$/docker/nginx/nginx.Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+              <caret line="8" column="45" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -248,46 +245,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.inc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker/phpmyadmin/config.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phpmyadmin.Dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker/phpmyadmin/phpmyadmin.Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="docker-entrypoint.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker/phpmyadmin/docker-entrypoint.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.Dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker/composer/composer.Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -298,6 +255,7 @@
       <find>keybox</find>
       <find>gnup</find>
       <find>run chmod</find>
+      <find>mysql</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\ext-rridane\starterkit\docker</dir>
@@ -322,8 +280,13 @@
         <option value="$PROJECT_DIR$/docker/mySQL/docker-entrypoint.sh" />
         <option value="$PROJECT_DIR$/docker/php/php.Dockerfile" />
         <option value="$PROJECT_DIR$/docker/mySQL/localdb-run.sh" />
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/docker/mySQL/mySQL.Dockerfile" />
+        <option value="$PROJECT_DIR$/docker/.env" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/etc/nginx/default.conf" />
+        <option value="$PROJECT_DIR$/etc/nginx/default.template.conf" />
+        <option value="$PROJECT_DIR$/etc/php/php.ini" />
       </list>
     </option>
   </component>
@@ -356,7 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -367,57 +329,19 @@
             </path>
             <path>
               <item name="starterkit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starterkit" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="data" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="starterkit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starterkit" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docker" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="starterkit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starterkit" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docker" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="composer" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="starterkit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starterkit" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docker" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mySQL" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="starterkit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starterkit" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docker" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="nginx" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="starterkit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starterkit" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docker" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="starterkit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starterkit" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docker" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phpmyadmin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="starterkit" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="C:/nodejs/node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -442,16 +366,18 @@
       <option name="presentableId" value="Default" />
       <updated>1528816688518</updated>
       <workItem from="1528816690969" duration="9597000" />
+      <workItem from="1528987213596" duration="1850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20151000" />
+    <option name="totallyTimeSpent" value="22701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13859275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -482,40 +408,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docker-compose3.yml" />
-    <entry file="file://$PROJECT_DIR$/docker/apache/apache.Dockerfile" />
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/nginx/nginx.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/php/php.Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="60" lean-forward="false" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding>
-            <marker date="1528793558792" expanded="true" signature="70:132" ph="{&quot;php&quot;: &quot;^7.0.8&quot;...}" />
-            <marker date="1528793558792" expanded="true" signature="2253:2298" ph="{&quot;allow-contrib&quot;: false...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -532,10 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding>
-            <marker date="1528793558792" expanded="true" signature="70:132" ph="{&quot;php&quot;: &quot;^7.0.8&quot;...}" />
-            <marker date="1528793558792" expanded="true" signature="2253:2298" ph="{&quot;allow-contrib&quot;: false...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -543,14 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -558,10 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <marker date="1528793558792" expanded="true" signature="70:132" ph="{&quot;php&quot;: &quot;^7.0.8&quot;...}" />
-            <marker date="1528793558792" expanded="true" signature="2253:2298" ph="{&quot;allow-contrib&quot;: false...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -569,7 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -585,7 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,10 +504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <marker date="1528793558792" expanded="true" signature="70:132" ph="{&quot;php&quot;: &quot;^7.0.8&quot;...}" />
-            <marker date="1528793558792" expanded="true" signature="2253:2298" ph="{&quot;allow-contrib&quot;: false...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -637,7 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,7 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="54" lean-forward="false" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,10 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding>
-            <marker date="1528793558792" expanded="true" signature="70:132" ph="{&quot;php&quot;: &quot;^7.0.8&quot;...}" />
-            <marker date="1528793558792" expanded="true" signature="2253:2298" ph="{&quot;allow-contrib&quot;: false...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,13 +594,7 @@
     <entry file="file://$PROJECT_DIR$/data/mysql/mysql/slow_log.CSM" />
     <entry file="file://$PROJECT_DIR$/data/mysql/mysql/general_log_78.sdi" />
     <entry file="file://$PROJECT_DIR$/data/mysql/mysql.ibd" />
-    <entry file="file://$PROJECT_DIR$/data/mysql/undo_2_trunc.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/mysql/undo_2_trunc.log" />
     <entry file="file://$PROJECT_DIR$/data/mysql/ib_logfile1">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="0">
@@ -741,24 +602,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/mysql/undo_1_trunc.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="0">
-          <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/mysql/undo_1_trunc.log" />
     <entry file="file://$PROJECT_DIR$/data/mysql/undo_002">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="55" lean-forward="false" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,7 +621,7 @@
     <entry file="file://$PROJECT_DIR$/docker/nginx/nginx.Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <caret line="8" column="45" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -782,7 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2202">
           <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -794,26 +641,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docker/mySQL/mySQL.Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docker/mySQL/localdb-run.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/nginx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+        <state relative-caret-position="340">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/mySQL/mySQL.Dockerfile">
+    <entry file="file://$PROJECT_DIR$/etc/nginx/default.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="91" lean-forward="true" selection-start-line="8" selection-start-column="91" selection-end-line="8" selection-end-column="91" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/nginx/default.template.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="3" lean-forward="false" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/php/php.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
           <folding />
         </state>
       </provider>
