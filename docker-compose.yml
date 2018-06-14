@@ -1,109 +1,56 @@
 version: '3'
-
 services:
-  web:
-    image: nginx:alpine
-    volumes:
-        - "./etc/nginx/default.conf:/etc/nginx/conf.d/default.conf"
-        - "./etc/ssl:/etc/ssl"
-        - "./web:/var/www/html"
-        - "./etc/nginx/default.template.conf:/etc/nginx/conf.d/default.template"
-    ports:
-        - "8000:80"
-        - "3000:443"
-    environment:
-        - NGINX_HOST=${NGINX_HOST}
-    command: /bin/sh -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
-    restart: always
-    depends_on:
-        - php
-        - mysqldb
-  php:
-    build: 
-      context: ./docker/php
-      dockerfile: php.Dockerfile
-    ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      - '.:/var/www/html'
-    links:
-      - mysqldb
-      - myadmin
-
-  # phpmyadmin:
-  #   image: phpmyadmin/phpmyadmin
-  #   container_name: sf4_phpmyadmin
-  #   ports:
-  #     - 9090:80
-  #   depends_on:
-  #      - mysql
-  #   links:
-  #      - mysql
-  #   environment:
-  #     - PMA_ARBITRARY=1
-
-#  mysqldb:
-#    build:
-#      context: ./docker/mySQL
-#      dockerfile: mySQL.Dockerfile
-##    restart: always
-#    ports:
-#      - 3306:3306
-##    entrypoint: /localdb-run.sh
-#    volumes:
-##      - ./config/mysql:/etc/mysql/conf.d:ro
-##      - ./docker/mySQL/docker-entrypoint.sh:/docker-entrypoint-initdb.d/docker-entrypoint.sh
-#      - ./data/mysql:/var/lib/mysql
-##      - ./docker/mySQL/:/stack/localdb/
-#    environment:
-#      MYSQL_ROOT_PASSWORD: password
-#      MYSQL_DATABASE: starterkit
-#      MYSQL_USER: user
-#      MYSQL_PASSWORD: pass
-#    command: "/stack/localdb/localdb-run.sh"
-#
-#  phpmyadmin:
-#    build:
-#      context: docker/phpmyadmin
-#      dockerfile: docker/phpmyadmin/phpmyadmin.Dockerfile
-#    links:
-#      - mysql:mysql
-#    ports:
-#      - 1234:80
-#    environment:
-#      PMA_USER : root
-##      PMA_PASSWORD : root
-#    environment:
-#      - PMA_ARBITRARY=1
-#
-
-  myadmin:
-      image: phpmyadmin/phpmyadmin
-      container_name: phpmyadmin
-      ports:
-          - "8080:80"
-      environment:
-          - PMA_ARBITRARY=1
-          - PMA_HOST=${MYSQL_HOST}
-      restart: always
-      depends_on:
-          - mysqldb
-  mysqldb:
-      image: mysql:${MYSQL_VERSION}
-      container_name: ${MYSQL_HOST}
-      restart: always
-      env_file:
-          - ".env"
-      environment:
-          - MYSQL_DATABASE=${MYSQL_DATABASE}
-          - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-          - MYSQL_USER=${MYSQL_USER}
-          - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      ports:
-          - "8989:3306"
-      volumes:
-          - "./data/db/mysql:/var/lib/mysql"
-
-# volumes:
-#   data:
+    web:
+        image: nginx:alpine
+        volumes:
+            - "./docker/etc/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+            - "./docker/etc/ssl:/etc/ssl"
+            - ".:/var/www/html"
+            - "./docker/etc/nginx/default.template.conf:/etc/nginx/conf.d/default.template"
+        ports:
+            - "8000:80"
+            - "3000:443"
+        environment:
+            - NGINX_HOST=${NGINX_HOST}
+        command: /bin/sh -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+        restart: always
+        depends_on:
+            - php
+            - mysqldb
+    php:
+        image: nanoninja/php-fpm:${PHP_VERSION}
+        restart: always
+        volumes:
+            - "./docker/etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
+            - ".:/var/www/html"
+    composer:
+        image: "composer"
+        volumes:
+            - ".:/app"
+        command: install
+    myadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        ports:
+            - "9090:80"
+        environment:
+            - PMA_ARBITRARY=1
+            - PMA_HOST=${MYSQL_HOST}
+        restart: always
+        depends_on:
+            - mysqldb
+    mysqldb:
+        image: mysql:${MYSQL_VERSION}
+        container_name: ${MYSQL_HOST}
+        restart: always
+        env_file:
+            - ".env"
+        environment:
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        ports:
+            - "8989:3306"
+        volumes:
+            - "./data/db/mysql:/var/lib/mysql"
