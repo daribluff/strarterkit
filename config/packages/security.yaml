@@ -1,39 +1,34 @@
 security:
-    encoders:
-        FOS\UserBundle\Model\UserInterface: bcrypt
 
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: ROLE_ADMIN
+  encoders:
+    FOS\UserBundle\Model\UserInterface: bcrypt
 
-    providers:
-        fos_userbundle:
-            id: fos_user.user_provider.username
+  role_hierarchy:
+    ROLE_ADMIN:       ROLE_USER
+    ROLE_SUPER_ADMIN: ROLE_ADMIN
 
-    firewalls:
-        main:
-            pattern: ^/
-            form_login:
-                provider: fos_userbundle
-                csrf_token_generator: security.csrf.token_manager
+  providers:
+    oauth_user_provider:
+      id: app.fos_user.oauth_provider
 
-            logout:       true
-            anonymous:    true
-            oauth:
-              resource_owners:
-                facebook:           "/login/check-facebook"
-                google:             "/login/check-google"
-                my_custom_provider: "/login/check-custom"
-                my_github:          "/login/check-github"
-              login_path:        /login
-              use_forward:       false
-              failure_path:      /login
+  firewalls:
+    # Set the config on your firewall
+    main:
+      oauth:
+        # Declare the OAuth Callback URLs for every resource owner
+        # They will be added in the routing.yml file too later
+        resource_owners:
+          facebook: "/connect/check-facebook"
+        ## Provide the original login path of your application (fosuserroute)
+        ## and the failure route when the authentication fails.
+        login_path:     /user/login
+        failure_path:   /user/login
+        # Inject a service that will be created in the step #6
+        oauth_user_provider:
+          service: app.fos_user.oauth_provider
 
-            oauth_user_provider:
-              service: my.oauth_aware.user_provider.service
-
-    access_control:
-        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin/, role: ROLE_ADMIN }
+#    access_control:
+#        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/admin/, role: ROLE_ADMIN }

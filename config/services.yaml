@@ -1,54 +1,72 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: 'en'
+  locale: 'en'
+  FB_ID: 832685470180457
+  client_secret: b132303b1476a767cc96108e29647dbf
 
 services:
-    # default configuration for services in *this* file
-    _defaults:
-        autowire: true      # Automatically injects dependencies in your services.
-        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-        public: false       # Allows optimizing the container by removing unused services; this also means
-                            # fetching services directly from the container via $container->get() won't work.
-                            # The best practice is to be explicit about your dependencies anyway.
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+    public: false       # Allows optimizing the container by removing unused services; this also means
+    # fetching services directly from the container via $container->get() won't work.
+    # The best practice is to be explicit about your dependencies anyway.
 
-    # makes classes in src/ available to be used as services
-    # this creates a service per class whose id is the fully-qualified class name
-    App\:
-        resource: '../src/*'
-        exclude: '../src/{Entity,Migrations,Tests,Kernel.php}'
+  # makes classes in src/ available to be used as services
+  # this creates a service per class whose id is the fully-qualified class name
+  App\:
+    resource: '../src/*'
+    exclude: '../src/{Entity,Migrations,Tests,Kernel.php}'
 
-    # controllers are imported separately to make sure services can be injected
-    # as action arguments even if you don't extend any base controller class
-    App\Controller\:
-        resource: '../src/Controller'
-        tags: ['controller.service_arguments']
+  # controllers are imported separately to make sure services can be injected
+  # as action arguments even if you don't extend any base controller class
+  App\Controller\:
+    resource: '../src/Controller'
+    tags: ['controller.service_arguments']
 
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
+  # add more service definitions when explicit configuration is needed
+  # please note that last definitions always *replace* previous ones
 
-fos_user:
+  hwi_oauth:
+    # Define which firewalls will be used for oauth
+    # Usually, its only the main, but you can add it if you have a custom one
+    firewall_names: ["main"]
+    fosub:
+      username_iterations: 30
+      # Define in which columns of the fos_user table will be stored
+      # the access token of every resource_owner
+      properties:
+        facebook: FB_ID
+    # Define the resource_owners that your user can use to login into your app
+    # Note that the client_id and client_secret and key values are symfony parameters
+    # stored too in the config.yml from the previous step !
+    resource_owners:
+      facebook:
+        type:           facebook
+        client_id:      "%FB_ID%"
+        client_secret:  "%client_secret%"
+        infos_url:     "https://graph.facebook.com/me?fields=id,name,email"
+    class: Http\Client\Common\HttpMethodsClient
+#    arguments: ['@httplug.client','@httplug.message_factory']
+
+  app.fos_user.oauth_provider:
+    # Change the class according to the location of the FOSUBUserProvider class
+    class: App\Entity\FOSUBUserProvider
+    arguments:
+      # Inject as first argument the user_manager of FOSUserBundle
+      user_manager: "@fos_user.user_manager"
+      # An object/array with the registered Social Media from config.yml
+      user_response:
+        facebook: FB_ID
+
+  fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
     user_class: App\Entity\User
-    service:                               # this lines
-        mailer: fos_user.mailer.twig_swift # this lines
-    from_email:
-        address: "rridane@rr-dev.com"
-        sender_name: "rridane"
-
-hwi_oauth:
-  # list of names of the firewalls in which this bundle is active, this setting MUST be set
-  firewall_names: main
-  resource_owners:
-    any_name:
-      type:                resource_owner_of_choice
-      client_id:           <client_id>
-      client_secret:       <client_secret>
-      options:
-        csrf: true
-
-my.oauth_aware.user_provider.service:
-  class: HWI\Bundle\OAuthBundle\Security\Core\User\FOSUBUserProvider
-  arguments:
-  - '@fos_user.user_manager'
+#    service:                               # this lines
+#      mailer: fos_user.mailer.twig_swift # this lines
+#    from_email:
+#      address: "rridane@rr-dev.com"
+#      sender_name: "rridane"
