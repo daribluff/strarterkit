@@ -12,8 +12,7 @@ security:
       id: app.fos_user.oauth_provider
 
   firewalls:
-    # Set the config on your firewall
-    main:
+    main: # Nom de mon firewall
       oauth:
         # Declare the OAuth Callback URLs for every resource owner
         # They will be added in the routing.yml file too later
@@ -25,7 +24,7 @@ security:
         failure_path:   fos_user_security_login
         # Inject a service that will be created in the step #6
         oauth_user_provider:
-          service: app.fos_user.oauth_provider
+          service: hwi_oauth.user.provider.entity
       anonymous:    true
 
   access_control:

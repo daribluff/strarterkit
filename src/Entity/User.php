@@ -1,74 +1,59 @@
 <?php
-// src/AppBundle/Entity/User.php
 
-namespace MyBundle\Entity;
+namespace App\Entity;
 
 use FOS\UserBundle\Model\User as FOSUBUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @ORM\Table(name="users")
- * @ORM\Entity
  */
 class User extends FOSUBUser
 {
     /**
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
     protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $facebookAccessToken;
 
     /**
      * @ORM\Column(name="facebook_id", type="string", length=255, nullable=true)
      */
     private $facebookId;
 
-    private $facebookAccessToken;
-
-    /**
-     * @return integer
-     */
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * @param string $facebookId
-     * @return User
-     */
-    public function setFacebookId($facebookId)
+    public function getFacebookAccessToken(): ?string
     {
-        $this->facebookId = $facebookId;
-
-        return $this;
+        return $this->facebookAccessToken;
     }
 
-    /**
-     * @return string
-     */
-    public function getFacebookId()
-    {
-        return $this->facebookId;
-    }
-
-    /**
-     * @param string $facebookAccessToken
-     * @return User
-     */
-    public function setFacebookAccessToken($facebookAccessToken)
+    public function setFacebookAccessToken(?string $facebookAccessToken): self
     {
         $this->facebookAccessToken = $facebookAccessToken;
 
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getFacebookAccessToken()
+    public function getFacebookId(): ?string
     {
-        return $this->facebookAccessToken;
+        return $this->facebookId;
+    }
+
+    public function setFacebookId(string $facebookId): self
+    {
+        $this->facebookId = $facebookId;
+
+        return $this;
     }
 }
