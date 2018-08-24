@@ -3,7 +3,7 @@
 parameters:
   locale: 'en'
   FB_ID: 832685470180457
-  client_secret: b132303b1476a767cc96108e29647dbf
+  FB_SECRET: b132303b1476a767cc96108e29647dbf
 
 services:
   # default configuration for services in *this* file
@@ -38,33 +38,33 @@ services:
       # Define in which columns of the fos_user table will be stored
       # the access token of every resource_owner
       properties:
-        facebook: FB_ID
+        facebook: facebook_id
     # Define the resource_owners that your user can use to login into your app
     # Note that the client_id and client_secret and key values are symfony parameters
     # stored too in the config.yml from the previous step !
     resource_owners:
       facebook:
         type:           facebook
-        client_id:      "%FB_ID%"
-        client_secret:  "%client_secret%"
-        infos_url:     "https://graph.facebook.com/me?fields=id,name,email"
+        client_id:      "FB_ID"
+        client_secret:  "FB_SECRET"
+        infos_url:      "https://graph.facebook.com/me?fields=id,name,email"
     class: Http\Client\Common\HttpMethodsClient
     arguments: ['@httplug.client','@httplug.message_factory']
 
   app.fos_user.oauth_provider:
     # Change the class according to the location of the FOSUBUserProvider class
-    class: App\Entity\FOSUBUserProvider
+    class: App\Security\Core\User\FOSUBUserProvider
     arguments:
       # Inject as first argument the user_manager of FOSUserBundle
       - "@fos_user.user_manager"
       # An object/array with the registered Social Media from config.yml
       # user_response:
-      - ['FB_ID']
+      - [facebook: 'FB_ID']
 
 fos_user:
 #  db_driver: orm # other valid values are 'mongodb' and 'couchdb'
 #  firewall_name: main
-  user_class: App\Entity\FOSUBUserProvider
+  user_class: App\Entity\User
     service:                               # this lines
       mailer: fos_user.mailer.twig_swift # this lines
     from_email:
