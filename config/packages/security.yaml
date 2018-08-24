@@ -21,14 +21,14 @@ security:
           facebook: "/connect/check-facebook"
         ## Provide the original login path of your application (fosuserroute)
         ## and the failure route when the authentication fails.
-        login_path:     /user/login
-        failure_path:   /user/login
+        login_path:     /login
+        failure_path:   /loginfailed
         # Inject a service that will be created in the step #6
         oauth_user_provider:
           service: app.fos_user.oauth_provider
 
-#    access_control:
-#        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-#        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-#        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-#        - { path: ^/admin/, role: ROLE_ADMIN }
+    access_control:
+      - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/admin/, role: ROLE_ADMIN }

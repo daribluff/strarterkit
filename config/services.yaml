@@ -49,24 +49,24 @@ services:
         client_secret:  "%client_secret%"
         infos_url:     "https://graph.facebook.com/me?fields=id,name,email"
     class: Http\Client\Common\HttpMethodsClient
-#    arguments: ['@httplug.client','@httplug.message_factory']
+    arguments: ['@httplug.client','@httplug.message_factory']
 
   app.fos_user.oauth_provider:
     # Change the class according to the location of the FOSUBUserProvider class
     class: App\Entity\FOSUBUserProvider
     arguments:
       # Inject as first argument the user_manager of FOSUserBundle
-      user_manager: "@fos_user.user_manager"
+      - "@fos_user.user_manager"
       # An object/array with the registered Social Media from config.yml
-      user_response:
-        facebook: FB_ID
+      # user_response:
+      - ['FB_ID']
 
-  fos_user:
-    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
-    firewall_name: main
-    user_class: App\Entity\User
-#    service:                               # this lines
-#      mailer: fos_user.mailer.twig_swift # this lines
-#    from_email:
-#      address: "rridane@rr-dev.com"
-#      sender_name: "rridane"
+fos_user:
+#  db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+#  firewall_name: main
+  user_class: App\Entity\FOSUBUserProvider
+    service:                               # this lines
+      mailer: fos_user.mailer.twig_swift # this lines
+    from_email:
+      address: "rridane@rr-dev.com"
+      sender_name: "rridane"
