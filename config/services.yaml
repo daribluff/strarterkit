@@ -29,16 +29,6 @@ services:
   # add more service definitions when explicit configuration is needed
   # please note that last definitions always *replace* previous ones
 
-  app.fos_user.oauth_provider:
-    # Change the class according to the location of the FOSUBUserProvider class
-    class: App\Security\Core\User\FOSUBUserProvider
-    arguments:
-    # Inject as first argument the user_manager of FOSUserBundle
-    - "@fos_user.user_manager"
-    # An object/array with the registered Social Media from config.yml
-    # user_response:
-    - [facebook: '%FB_ID%']
-
   hwi_oauth.user.provider.entity:
     class: App\Security\Core\User\FOSUBUserProvider
     arguments:
@@ -52,11 +42,11 @@ fos_user:
   #  db_driver: orm # other valid values are 'mongodb' and 'couchdb'
   #  firewall_name: main
   user_class: App\Entity\User
-    service:                               # this lines
-      mailer: fos_user.mailer.twig_swift # this lines
-    from_email:
-      address: "rridane@rr-dev.com"
-      sender_name: "rridane"
+  service:                               # this lines
+    mailer: fos_user.mailer.twig_swift # this lines
+  from_email:
+    address: "rridane@rr-dev.com"
+    sender_name: "rridane"
 
 hwi_oauth:
   # Define which firewalls will be used for oauth
@@ -77,5 +67,6 @@ hwi_oauth:
       client_id:      "%FB_ID%"
       client_secret:  "%FB_SECRET%"
       infos_url:      "https://graph.facebook.com/me?fields=id,name,email"
+      scope:         "email"
       options:
         display: popup

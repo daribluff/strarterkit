@@ -8,8 +8,8 @@ security:
     ROLE_SUPER_ADMIN: ROLE_ADMIN
 
   providers:
-    oauth_user_provider:
-      id: app.fos_user.oauth_provider
+    fos_userbundle:
+      id: fos_user.user_provider.username
 
   firewalls:
     main: # Nom de mon firewall
@@ -17,7 +17,7 @@ security:
         # Declare the OAuth Callback URLs for every resource owner
         # They will be added in the routing.yml file too later
         resource_owners:
-          facebook: "/check-facebook"
+          facebook: "/login/check-facebook"
         ## Provide the original login path of your application (fosuserroute)
         ## and the failure route when the authentication fails.
         login_path:     fos_user_security_login
@@ -26,6 +26,10 @@ security:
         oauth_user_provider:
           service: hwi_oauth.user.provider.entity
       anonymous:    true
+      pattern: ^/
+      form_login:
+        provider: fos_userbundle
+        csrf_token_generator: security.csrf.token_manager
 
   access_control:
     - { path: ^/user/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
