@@ -10,6 +10,7 @@ class LuckyController extends Controller
 {
     public function number(Request $request)
     {
+
         $number = mt_rand(0, 100);
 
         return $this->render('number.html.twig', array(
