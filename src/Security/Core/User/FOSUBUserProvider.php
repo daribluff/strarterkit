@@ -39,6 +39,10 @@ class FOSUBUserProvider extends BaseClass {
     }
 
     public function loadUserByOAuthUserResponse(UserResponseInterface $response) {
+
+        dump($response);
+        die;
+
         $data = $response->getResponse();
         $username = $response->getUsername();
         $email = $response->getEmail() ? $response->getEmail() : $username;

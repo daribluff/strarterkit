@@ -13,23 +13,24 @@ security:
 
   firewalls:
     main: # Nom de mon firewall
-      oauth:
-        # Declare the OAuth Callback URLs for every resource owner
-        # They will be added in the routing.yml file too later
-        resource_owners:
-          facebook: "/login/check-facebook"
-        ## Provide the original login path of your application (fosuserroute)
-        ## and the failure route when the authentication fails.
-        login_path:     fos_user_security_login
-        failure_path:   fos_user_security_login
-        # Inject a service that will be created in the step #6
-        oauth_user_provider:
-          service: hwi_oauth.user.provider.entity
-      anonymous:    true
       pattern: ^/
       form_login:
         provider: fos_userbundle
         csrf_token_generator: security.csrf.token_manager
+      oauth:
+        # Declare the OAuth Callback URLs for every resource owner
+        # They will be added in the routing.yml file too later
+        resource_owners:
+          facebook: "/connect/check-facebook"
+        ## Provide the original login path of your application (fosuserroute)
+        ## and the failure route when the authentication fails.
+        login_path:     /connect
+        failure_path:   /connect
+        # Inject a service that will be created in the step #6
+        oauth_user_provider:
+          service: hwi_oauth.user.provider.entity
+      anonymous: true
+      logout: true
 
   access_control:
     - { path: ^/user/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }

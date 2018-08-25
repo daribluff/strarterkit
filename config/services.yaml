@@ -36,7 +36,7 @@ services:
     - "@fos_user.user_manager"
     # An object/array with the registered Social Media from config.yml
     # user_response:
-    - [facebook: '%FB_ID%']
+    - [facebook: '%FB_ID%', '%FB_SECRET%']
 
 fos_user:
   #  db_driver: orm # other valid values are 'mongodb' and 'couchdb'
@@ -51,13 +51,16 @@ fos_user:
 hwi_oauth:
   # Define which firewalls will be used for oauth
   # Usually, its only the main, but you can add it if you have a custom one
+  connect:
+    confirmation: true
+    registration_form: fos_user.registration.form.factory
   firewall_names: ["main"]
   fosub:
     username_iterations: 30
     # Define in which columns of the fos_user table will be stored
     # the access token of every resource_owner
     properties:
-      facebook: facebook_id
+      facebook: facebookId
   # Define the resource_owners that your user can use to login into your app
   # Note that the client_id and client_secret and key values are symfony parameters
   # stored too in the config.yml from the previous step !
@@ -70,3 +73,17 @@ hwi_oauth:
       scope:         "email"
       options:
         display: popup
+  http:
+    client: httplug.client.hwi_special # Default to httplug.client.default
+
+httplug:
+  clients:
+    default:
+      factory: 'httplug.factory.curl'
+    hwi_special:
+      factory: 'httplug.factory.guzzle6'
+      config: # You pass here the Guzzle configuration, exactly like before.
+        timeout: 10
+        verify: false
+        max_redirects: 1
+        ignore_errors: true
