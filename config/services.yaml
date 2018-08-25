@@ -31,12 +31,12 @@ services:
 
   hwi_oauth.user.provider.entity:
     class: App\Security\Core\User\FOSUBUserProvider
-    arguments:
+    arguments: ["@fos_user.user_manager",{facebook: facebookId, google: google_id}]
     # Inject as first argument the user_manager of FOSUserBundle
-    - "@fos_user.user_manager"
+#    - "@fos_user.user_manager"
     # An object/array with the registered Social Media from config.yml
     # user_response:
-    - [facebook: '%FB_ID%', '%FB_SECRET%']
+#    - [facebook: '%FB_ID%', '%FB_SECRET%']
 
 fos_user:
   #  db_driver: orm # other valid values are 'mongodb' and 'couchdb'
@@ -60,7 +60,7 @@ hwi_oauth:
     # Define in which columns of the fos_user table will be stored
     # the access token of every resource_owner
     properties:
-      facebook: facebookId
+      facebook: facebook_id
   # Define the resource_owners that your user can use to login into your app
   # Note that the client_id and client_secret and key values are symfony parameters
   # stored too in the config.yml from the previous step !
@@ -69,7 +69,8 @@ hwi_oauth:
       type:           facebook
       client_id:      "%FB_ID%"
       client_secret:  "%FB_SECRET%"
-      infos_url:      "https://graph.facebook.com/me?fields=id,name,email"
+      infos_url:      "https://graph.facebook.com/me?fields=id,name,email,birthday,gender,last_name,first_name,address
+      "
       scope:         "email"
       options:
         display: popup
