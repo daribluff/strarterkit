@@ -4,6 +4,8 @@ parameters:
   locale: 'en'
   FB_ID: 832685470180457
   FB_SECRET: b132303b1476a767cc96108e29647dbf
+  GOOGLE_ID: 105558326142-mbe20kiv9i4479fj812stn8jnkhic5bg.apps.googleusercontent.com
+  GOOGLE_SECRET: xtAz9tfq8l279_ZpEmJJPlQ4
 
 services:
   # default configuration for services in *this* file
@@ -61,6 +63,7 @@ hwi_oauth:
     # the access token of every resource_owner
     properties:
       facebook: facebook_id
+      google: google_id
   # Define the resource_owners that your user can use to login into your app
   # Note that the client_id and client_secret and key values are symfony parameters
   # stored too in the config.yml from the previous step !
@@ -69,11 +72,15 @@ hwi_oauth:
       type:           facebook
       client_id:      "%FB_ID%"
       client_secret:  "%FB_SECRET%"
-      infos_url:      "https://graph.facebook.com/me?fields=id,name,email,birthday,gender,last_name,first_name,address
-      "
-      scope:         "email"
+      infos_url:      "https://graph.facebook.com/me?fields=id,name,email,birthday,gender,last_name,first_name,address"
+      scope:          "email"
       options:
         display: popup
+    google:
+      type:           google
+      client_id:      "%GOOGLE_ID%"
+      client_secret:  "%GOOGLE_SECRET%"
+      scope:          "email profile"
   http:
     client: httplug.client.hwi_special # Default to httplug.client.default
 

@@ -38,6 +38,16 @@ class User extends FOSUBUser
      */
     private $prenom;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $google_id;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $google_access_token;
+
     public function getId()
     {
         return $this->id;
@@ -87,6 +97,30 @@ class User extends FOSUBUser
     public function setPrenom(string $prenom): self
     {
         $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    public function getGoogleId(): ?string
+    {
+        return $this->google_id;
+    }
+
+    public function setGoogleId(?string $google_id): self
+    {
+        $this->google_id = $google_id;
+
+        return $this;
+    }
+
+    public function getGoogleAccessToken(): ?string
+    {
+        return $this->google_access_token;
+    }
+
+    public function setGoogleAccessToken(?string $google_access_token): self
+    {
+        $this->google_access_token = $google_access_token;
 
         return $this;
     }

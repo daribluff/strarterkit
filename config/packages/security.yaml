@@ -22,6 +22,7 @@ security:
         # They will be added in the routing.yml file too later
         resource_owners:
           facebook: "/connect/check-facebook"
+          google: "/connect/check-google"
         ## Provide the original login path of your application (fosuserroute)
         ## and the failure route when the authentication fails.
         login_path:     /connect
