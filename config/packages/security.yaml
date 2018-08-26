@@ -12,22 +12,17 @@ security:
       id: fos_user.user_provider.username_email
 
   firewalls:
-    main: # Nom de mon firewall
+    main:
       pattern: ^/
       form_login:
         provider: fos_userbundle
         csrf_token_generator: security.csrf.token_manager
       oauth:
-        # Declare the OAuth Callback URLs for every resource owner
-        # They will be added in the routing.yml file too later
         resource_owners:
-          facebook: "/connect/check-facebook"
-          google: "/connect/check-google"
-        ## Provide the original login path of your application (fosuserroute)
-        ## and the failure route when the authentication fails.
+          facebook:     "/connect/check-facebook"
+          google:       "/connect/check-google"
         login_path:     /connect
         failure_path:   /connect
-        # Inject a service that will be created in the step #6
         oauth_user_provider:
           service: hwi_oauth.user.provider.entity
       anonymous: true

@@ -1,26 +1,26 @@
 hwi_oauth_redirect:
-    resource: "@HWIOAuthBundle/Resources/config/routing/redirect_41.xml"
-    prefix:   /connect
+  resource: "@HWIOAuthBundle/Resources/config/routing/redirect_41.xml"
+  prefix:   /connect
 
 hwi_oauth_connect:
-    resource: "@HWIOAuthBundle/Resources/config/routing/connect_41.xml"
-    prefix:   /connect
+  resource: "@HWIOAuthBundle/Resources/config/routing/connect_41.xml"
+  prefix:   /connect
 
 hwi_oauth_login:
-    resource: "@HWIOAuthBundle/Resources/config/routing/login_41.xml"
-    prefix:   /connect
+  resource: "@HWIOAuthBundle/Resources/config/routing/login_41.xml"
+  prefix:   /connect
 
 fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+  resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 facebook_login:
-    path: /connect/check-facebook
+  path: /connect/check-facebook
 
 google_login:
-    path: /connect/check-google
+  path: /connect/check-google
 
 custom_login:
-    path: /connect/check-custom
+  path: /connect/check-custom
 
 github_login:
-    path: /connect/check-github
+  path: /connect/check-github
