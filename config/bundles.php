@@ -18,4 +18,5 @@ return [
     HWI\Bundle\OAuthBundle\HWIOAuthBundle::class => ['all' => true],
     Http\HttplugBundle\HttplugBundle::class => ['all' => true],
     Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle::class => ['all' => true],
+    Kreait\Firebase\Symfony\Bundle\FirebaseBundle::class => ['all' => true],
 ];
