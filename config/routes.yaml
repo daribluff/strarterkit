@@ -4,3 +4,6 @@ fos_user:
 app_lucky_number:
     path: /
     controller: App\Controller\LuckyController::number
+
+api_login_check:
+    path: /api/login_check
