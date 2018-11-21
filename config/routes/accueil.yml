@@ -1,0 +1,3 @@
+accueil:
+  path: /accueil
+  controller: App\Controller\AccueilController::accueil
